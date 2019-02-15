@@ -1,0 +1,502 @@
+/*!
+ * Main content
+ */
+
+.main {
+  padding-top: 70px;
+
+  & .tabs-nav {
+    border-bottom: none;
+    margin-bottom: 20px;
+
+    & .button {
+      text-transform: uppercase;
+      color: $green;
+      font-weight: 600;
+      border: 0;
+      cursor: pointer;
+      background: transparent;
+      margin-right: 0;
+      padding: 3px 13px;
+
+      &:hover {
+        border-bottom: none;
+        background: $green;
+        color: $white;
+      }
+
+      &.is-checked {
+        color: $purple;
+        background-color: transparent;
+        border-color: transparent;
+      }
+    }
+  }
+
+  & .grid {
+    height: auto;
+    display: block;
+
+    &:after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+
+    &-item {
+      position: relative;
+      margin-bottom: 20px;
+      width: 50%;
+      float: left;
+      padding-right: 10px;
+
+      &:hover {
+        & .tabs-block-img {
+          transition: .3s;
+          overflow: hidden;
+          transition: .3s;
+
+          &:after {
+            content: 'ПОДРОБНЕЕ';
+            transition: .3s;
+            text-align: center;
+            color: $purple;
+            font-weight: 600;
+            line-height: 180px;
+            position: absolute;
+            display: block;
+            height: 100%;
+            width: 100%;
+            left: 0;
+            top: 0;
+            background: rgba(255,255,255,.5);
+            z-index: 3;
+          }
+          & img {
+            transform: scale(1.1);
+            transition: .5s;
+            position: relative;
+            z-index: 2;
+
+          }
+
+          & img {
+            transform: scale(1.08);
+          }
+        }
+      }
+
+      @media screen and (max-width: 767px) {
+        width: 100%;
+      }
+
+      & .tabs-block-title {
+        height: 120px;
+        width: 100%;
+        background: $white;
+        border-left: 5px solid $green;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        & p {
+          font-size: 14px;
+          line-height: 16px;
+        }
+      }
+
+      & a {
+
+        & .tabs-block-img {
+          overflow: hidden;
+          height: 240px;
+          z-index: 3;
+          position: relative;
+          transition: .3s;
+
+          & img {
+            height: 100%;
+            width: auto;
+            z-index: 1;
+            transition: .3s;
+
+            &:after {
+              content: '';
+              transition: .3s;
+            }
+          }
+
+          &:hover {
+            transition: .3s;
+            overflow: hidden;
+            transition: .3s;
+
+            &:after {
+              content: 'ПОДРОБНЕЕ';
+              transition: .3s;
+              text-align: center;
+              color: $purple;
+              font-weight: 600;
+              line-height: 180px;
+              position: absolute;
+              display: block;
+              height: 100%;
+              width: 100%;
+              left: 0;
+              top: 0;
+              background: rgba(255,255,255,.5);
+              z-index: 3;
+            }
+            & img {
+              transform: scale(1.1);
+              transition: .5s;
+              position: relative;
+              z-index: 2;
+
+            }
+          }
+        }
+      }
+
+      & .countdown {
+        position: relative;
+        height: 70px;
+        width: 100%;
+        margin-top: -70px;
+        color: $white;
+        background: rgba(0, 0, 0, .55);
+        z-index: 2;
+        display: flex;
+        justify-content: space-around;
+        align-content: center;
+        align-items: center;
+        font-size: 15px;
+        z-index: 5;
+
+        & [id*=clockdiv].hidden {
+          display: none;
+        }
+      }
+
+      & .tabs-block-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .tabs-block-left {
+          color: $grey;
+          font-weight: 400;
+
+          & .views {
+            display: inline-block;
+            background: url("../img/views.png") center left no-repeat;
+            width: 75px;
+            height: 25px;
+            padding-left: 40px;
+          }
+
+          & .favorites {
+            display: inline-block;
+            background: url("../img/favorites.png") center left no-repeat;
+            width: 70px;
+            height: 25px;
+            padding-left: 35px;
+          }
+
+          & .comment {
+            display: inline-block;
+            background: url("../img/comment.png") center left no-repeat;
+            width: 70px;
+            height: 25px;
+            padding-left: 35px;
+          }
+        }
+
+        .tabs-block-right {
+          position: relative;
+          margin-right: 20px;
+          width: 46px;
+          height: 46px;
+          background: url("../img/like.png") center center no-repeat;
+
+          & .like {
+            background: transparent;
+            width: 46px;
+            height: 23px;
+            display: inline-block;
+            border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+            transform: rotate(-45deg);
+            position: absolute;
+            left: -9px;
+            top: 3px;
+            z-index: 1;
+
+            &:hover {
+              text-decoration: none;
+              background: rgba(255, 255, 255, .5);
+            }
+          }
+
+          & .like-no {
+            color: $green;
+            position: absolute;
+            top: 11px;
+            left: -37px;
+            display: block;
+            width: 30px;
+            height: 22px;
+            margin-left: 0;
+            margin-top: 0;
+            text-align: right;
+            z-index: 2;
+          }
+
+          & .dislike {
+            background: transparent;
+            width: 46px;
+            height: 23px;
+            display: inline-block;
+            border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+            transform: rotate(135deg);
+            position: absolute;
+            right: -9px;
+            bottom: 3px;
+            z-index: 1;
+
+            &:hover {
+              text-decoration: none;
+              background: rgba(255, 255, 255, .5);
+            }
+          }
+
+          & .dislike-no {
+            color: $purple;
+            position: absolute;
+            top: 11px;
+            left: 53px;
+            display: block;
+            margin-right: 0;
+            margin-top: 0;
+            width: 30px;
+            height: 22px;
+            text-align: left;
+            z-index: 2;
+          }
+        }
+      }
+
+      & .tabs-block-bottom {
+        position: absolute;
+        right: 25px;
+        top: 130px;
+
+        & .discount {
+          color: $white;
+          background: $purple;
+          border-radius: 50%;
+          width: 45px;
+          height: 45px;
+          display: block;
+          line-height: 45px;
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  & .recommend {
+
+    &-block {
+      position: relative;
+      width: 20%;
+
+      @media screen and (max-width: 1199px) {
+        width: 25%;
+        margin-bottom: 5px;
+      }
+      @media screen and (max-width: 991px) {
+        width: 33.333%;
+      }
+      @media screen and (max-width: 767px) {
+        width: 50%;
+      }
+      @media screen and (max-width: 449px) {
+        width: 100%;
+      }
+
+      &-img {
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+
+        & img {
+          width: auto;
+          height: 100%;
+          margin-left: auto;
+          margin-right: auto;
+
+          @media screen and (max-width: 449px) {
+            width: 100%;
+          }
+        }
+      }
+
+      &-title {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 110px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        margin: auto;
+        background: rgba(255, 255, 255, 0.6);
+
+        & p {
+          line-height: 16px;
+          padding: 10px;
+          margin-bottom: 0;
+          font-size: 14px;
+        }
+      }
+
+      &-bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        & .button {
+          display: block;
+          height: 28px;
+          background: $green;
+          color: $white;
+          font-size: 12px;
+          padding-left: 10px;
+          padding-right: 10px;
+          line-height: 28px;
+          text-transform: uppercase;
+
+          &:hover {
+            text-decoration: none;
+            background: $purple;
+          }
+        }
+
+        & .price {
+          display: block;
+          padding-left: 5px;
+          padding-right: 5px;
+          font-size: 12px;
+          line-height: 14px;
+          color: $black;
+        }
+
+        & .discount {
+          display: block;
+          color: $purple;
+          font-size: 20px;
+          font-weight: 600;
+          padding-left: 5px;
+          padding-right: 5px;
+        }
+      }
+    }
+  }
+
+  & .ideas {
+
+    &-block {
+      height: 100%;
+      width: 100%;
+      position: relative;
+      display: flex;
+      overflow: hidden;
+
+      & img {
+        width: auto;
+        height: 100%;
+
+        @media screen and (max-width: 991px) {
+          width: 100%;
+        }
+        @media screen and (max-width: 767px) {
+          width: auto;
+        }
+        @media screen and (max-width: 575px) {
+          width: 100%;
+        }
+      }
+
+      &-title {
+        position: absolute;
+        height: calc(100% - 30px);
+        width: calc(100% - 30px);
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        display: flex;
+        align-content: center;
+        align-items: flex-end;
+        padding: 15px 15px 20px 15px;
+        text-align: right;
+        background: rgba(255, 255, 255, 0.5);
+        font-size: 22px;
+        line-height: 30px;
+        transition: .3s;
+        color: $grey-dark;
+
+        & a {
+          display: block;
+          color: $grey-dark;
+
+          &:hover {
+            text-decoration: none;
+            color: $green;
+          }
+        }
+
+        &:hover {
+          background: rgba(255, 255, 255, 0.85);
+          height: 100%;
+          width: 100%;
+          transition: .3s;
+          padding: 30px 30px 35px 30px;
+          color: $grey-dark;
+
+          & a {
+            color: $grey-dark;
+
+            &:hover {
+              color: $green;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &-title {
+    font-size: 24px;
+    color: $green;
+  }
+
+  & .info {
+
+    &-block {
+      padding-left: 90px;
+
+      &-img {
+        float: left;
+        padding-top: 5px;
+        margin-left: -75px;
+      }
+    }
+  }
+}

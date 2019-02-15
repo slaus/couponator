@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="">
+    <meta name="author" content="XWork"/>
+
+    <meta property="og:title" content=""/>
+    <meta property="og:description" content=""/>
+    <meta property="og:type" content="text/html"/>
+    <meta property="og:url" content=""/>
+    <meta property="og:image" content=""/>
+
+    <meta name="msapplication-TileImage" content="images/favicon.png">
+    <link rel="icon" type="image/vnd.microsoft.icon" href="images/favicon.png" sizes="32x32"/>
+    <link rel="icon" type="image/png" href="images/favicon.png" sizes="152x152"/>
+    <link rel="apple-touch-icon-precomposed" href="images/favicon.png"/>
+    <link rel="apple-touch-icon" href="images/favicon.png" sizes="152x152">
+
+    <title>Site Title</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <!--build:css css/styles.min.css-->
+    <link rel="stylesheet" href="css/styles.css">
+    <!--endbuild-->
+    <!--[if lt IE 9]>
+    <link rel="stylesheet" href="css/ie.css" type="text/css" media="screen, projection"/>
+    <script src="js/html5shiv.min.js"></script>
+    <script src="js/css3-mediaqueries.min.js"></script>
+    <script>
+        document.createElement('header');
+        document.createElement('nav');
+        document.createElement('main');
+        document.createElement('section');
+        document.createElement('article');
+        document.createElement('aside');
+        document.createElement('footer');
+    </script>
+    <![endif]-->
+</head>
+
+<body>
+<div class="wrapper">
+    <header class="header">
+        <nav class="navbar fixed-top navbar-expand-md navbar-light bg-light">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Dropdown
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-toggle="modal" data-target="#exampleModal">Disabled</a>
+                    </li>
+                </ul>
+                <button type="button" class="btn btn-primary mr-2" data-toggle="modal"
+                        data-target="#exampleModalCenter">
+                    Модальное окно
+                </button>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Search</button>
+                </form>
+            </div>
+        </nav>
+    </header>
+    <main class="main pb-3">
+        <div class="container mb-5 isotope tabs">
+            <div class="filters tabs-nav button-group" id="filters">
+                <button class="button is-checked" data-filter="*">все акции</button>
+                <button class="button" data-filter=".day">акции дня</button>
+                <button class="button" data-filter=".popular">популярные акции</button>
+                <button class="button" data-filter=".new">самые новые акции</button>
+                <button class="button" data-filter=".ended">скоро закончатся</button>
+            </div>
+            <div class="grid">
+                <div class="grid-item element-item day" data-category="day">
+                    <div class="tabs-block-title">
+                        <p>Цветы с доставкой к любому празднику от компании «Цветы для Вас». Букеты из конфет, фруктов,
+                            необычные композиции и подарки.</p>
+                        <div class="tabs-block-top">
+                            <div class="tabs-block-left">
+                                <span class="views">35</span>
+                                <span class="favorites">23</span>
+                                <span class="comment">2</span>
+                            </div>
+                            <div class="tabs-block-right">
+                                <span class="like-no">5</span>
+                                <a href="" class="like" title="Нравится"></a>
+                                <a href="" class="dislike" title="Не нравится"></a>
+                                <span class="dislike-no">1</span>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="">
+                        <div class="tabs-block-img">
+                            <img src="img/main-1.jpg" alt="">
+                        </div>
+                    </a>
+                    <div class="countdown">
+                        <div class="clockdiv" id="clockdiv-1">
+                            <span class="days">5</span> дней <span class="hours">20</span>:<span
+                                class="minutes">49</span>:<span class="seconds">53</span>
+                        </div>
+                        <div class="before">
+                            Действует до <span class="end">26.05.19</span>
+                        </div>
+                    </div>
+                    <div class="tabs-block-bottom">
+                        <span class="discount">-45%</span>
+                    </div>
+                </div>
+                <div class="grid-item element-item popular ended" data-category="popular">
+                    <div class="tabs-block-title">
+                        <p>Клинака «Мерамед» предлагает скидки на комплексное обследование, и консультацию
+                            специалистов.</p>
+                        <div class="tabs-block-top">
+                            <div class="tabs-block-left">
+                                <span class="views">35</span>
+                                <span class="favorites">23</span>
+                                <span class="comment">2</span>
+                            </div>
+                            <div class="tabs-block-right">
+                                <span class="like-no">5</span>
+                                <a href="" class="like" title="Нравится"></a>
+                                <a href="" class="dislike" title="Не нравится"></a>
+                                <span class="dislike-no">1</span>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="">
+                        <div class="tabs-block-img">
+                            <img src="img/main-2.jpg" alt="">
+                        </div>
+                    </a>
+                    <div class="countdown">
+                        <div class="clockdiv" id="clockdiv-2">
+                            <span class="days">5</span> дней <span class="hours">20</span>:<span
+                                class="minutes">49</span>:<span class="seconds">53</span>
+                        </div>
+                        <div class="before">
+                            Действует до <span class="end">26.05.19</span>
+                        </div>
+                    </div>
+                    <div class="tabs-block-bottom">
+                        <span class="discount">-45%</span>
+                    </div>
+                </div>
+                <div class="grid-item element-item new" data-category="new">
+                    <div class="tabs-block-title">
+                        <p>Спорткомплекс «Юность» предлагает скидку на годовой абонимент занятий в тринажерном зале.</p>
+                        <div class="tabs-block-top">
+                            <div class="tabs-block-left">
+                                <span class="views">35</span>
+                                <span class="favorites">23</span>
+                                <span class="comment">2</span>
+                            </div>
+                            <div class="tabs-block-right">
+                                <span class="like-no">5</span>
+                                <a href="" class="like" title="Нравится"></a>
+                                <a href="" class="dislike" title="Не нравится"></a>
+                                <span class="dislike-no">1</span>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="">
+                        <div class="tabs-block-img">
+                            <img src="img/main-3.jpg" alt="">
+                        </div>
+                    </a>
+                    <div class="countdown">
+                        <div class="clockdiv" id="clockdiv-3">
+                            <span class="days">5</span> дней <span class="hours">20</span>:<span
+                                class="minutes">49</span>:<span class="seconds">53</span>
+                        </div>
+                        <div class="before">
+                            Действует до <span class="end">26.05.19</span>
+                        </div>
+                    </div>
+                    <div class="tabs-block-bottom">
+                        <span class="discount">-45%</span>
+                    </div>
+                </div>
+                <div class="grid-item element-item new ended popular" data-category="ended">
+                    <div class="tabs-block-title">
+                        <p>Глиль бар «Бостион» скидка на все меню на корпоративные мероприятия, дни рождения и
+                            вечеринки.</p>
+                        <div class="tabs-block-top">
+                            <div class="tabs-block-left">
+                                <span class="views">35</span>
+                                <span class="favorites">23</span>
+                                <span class="comment">2</span>
+                            </div>
+                            <div class="tabs-block-right">
+                                <span class="like-no">5</span>
+                                <a href="" class="like" title="Нравится"></a>
+                                <a href="" class="dislike" title="Не нравится"></a>
+                                <span class="dislike-no">1</span>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="">
+                        <div class="tabs-block-img">
+                            <img src="img/main-4.jpg" alt="">
+                        </div>
+                    </a>
+                    <div class="countdown">
+                        <div class="clockdiv" id="clockdiv-4">
+                            <span class="days">5</span> дней <span class="hours">20</span>:<span
+                                class="minutes">49</span>:<span class="seconds">53</span>
+                        </div>
+                        <div class="before">
+                            Действует до <span class="end">26.05.19</span>
+                        </div>
+                    </div>
+                    <div class="tabs-block-bottom">
+                        <span class="discount">-45%</span>
+                    </div>
+                </div>
+                <div class="grid-item element-item new popular" data-category="new">
+                    <div class="tabs-block-title">
+                        <p>Скидка на комплексные обеды с доставкой на дом в офис. Дамашняя кухня по выгодной цене.</p>
+                        <div class="tabs-block-top">
+                            <div class="tabs-block-left">
+                                <span class="views">35</span>
+                                <span class="favorites">23</span>
+                                <span class="comment">2</span>
+                            </div>
+                            <div class="tabs-block-right">
+                                <span class="like-no">5</span>
+                                <a href="" class="like" title="Нравится"></a>
+                                <a href="" class="dislike" title="Не нравится"></a>
+                                <span class="dislike-no">1</span>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="">
+                        <div class="tabs-block-img">
+                            <img src="img/main-5.jpg" alt="">
+                        </div>
+                    </a>
+                    <div class="countdown">
+                        <div class="clockdiv" id="clockdiv-5">
+                            <span class="days">5</span> дней <span class="hours">20</span>:<span
+                                class="minutes">49</span>:<span class="seconds">53</span>
+                        </div>
+                        <div class="before">
+                            Действует до <span class="end">26.05.19</span>
+                        </div>
+                    </div>
+                    <div class="tabs-block-bottom">
+                        <span class="discount">-45%</span>
+                    </div>
+                </div>
+                <div class="grid-item element-item popular" data-category="popular">
+                    <div class="tabs-block-title">
+                        <p>Кинотеатр «Аврора» скидки на все сеансы в будние дни.</p>
+                        <div class="tabs-block-top">
+                            <div class="tabs-block-left">
+                                <span class="views">35</span>
+                                <span class="favorites">23</span>
+                                <span class="comment">2</span>
+                            </div>
+                            <div class="tabs-block-right">
+                                <span class="like-no">5</span>
+                                <a href="" class="like" title="Нравится"></a>
+                                <a href="" class="dislike" title="Не нравится"></a>
+                                <span class="dislike-no">1</span>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="">
+                        <div class="tabs-block-img">
+                            <img src="img/main-6.jpg" alt="">
+                        </div>
+                    </a>
+                    <div class="countdown">
+                        <div class="clockdiv" id="clockdiv-6">
+                            <span class="days">5</span> дней <span class="hours">20</span>:<span
+                                class="minutes">49</span>:<span class="seconds">53</span>
+                        </div>
+                        <div class="before">
+                            Действует до <span class="end">26.05.19</span>
+                        </div>
+                    </div>
+                    <div class="tabs-block-bottom">
+                        <span class="discount">-45%</span>
+                    </div>
+                </div>
+                <div class="grid-item element-item day new" data-category="day">
+                    <div class="tabs-block-title">
+                        <p>Индивидуальный пошив в ателье «Ваш стиль».</p>
+                        <div class="tabs-block-top">
+                            <div class="tabs-block-left">
+                                <span class="views">35</span>
+                                <span class="favorites">23</span>
+                                <span class="comment">2</span>
+                            </div>
+                            <div class="tabs-block-right">
+                                <span class="like-no">5</span>
+                                <a href="" class="like" title="Нравится"></a>
+                                <a href="" class="dislike" title="Не нравится"></a>
+                                <span class="dislike-no">1</span>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="">
+                        <div class="tabs-block-img">
+                            <img src="img/main-7.jpg" alt="">
+                        </div>
+                    </a>
+                    <div class="countdown">
+                        <div class="clockdiv" id="clockdiv-7">
+                            <span class="days">5</span> дней <span class="hours">20</span>:<span
+                                class="minutes">49</span>:<span class="seconds">53</span>
+                        </div>
+                        <div class="before">
+                            Действует до <span class="end">26.05.19</span>
+                        </div>
+                    </div>
+                    <div class="tabs-block-bottom">
+                        <span class="discount">-45%</span>
+                    </div>
+                </div>
+                <div class="grid-item element-item day" data-category="day">
+                    <div class="tabs-block-title">
+                        <p>Центр развития ребенка «Солнышко» . Индивидуальные занятия с детьми логопед, английский язык,
+                            дефектолог.</p>
+                        <div class="tabs-block-top">
+                            <div class="tabs-block-left">
+                                <span class="views">35</span>
+                                <span class="favorites">23</span>
+                                <span class="comment">2</span>
+                            </div>
+                            <div class="tabs-block-right">
+                                <span class="like-no">5</span>
+                                <a href="" class="like" title="Нравится"></a>
+                                <a href="" class="dislike" title="Не нравится"></a>
+                                <span class="dislike-no">1</span>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="">
+                        <div class="tabs-block-img">
+                            <img src="img/main-8.jpg" alt="">
+                        </div>
+                    </a>
+                    <div class="countdown">
+                        <div class="clockdiv" id="clockdiv-8">
+                            <span class="days">5</span> дней <span class="hours">20</span>:<span
+                                class="minutes">49</span>:<span class="seconds">53</span>
+                        </div>
+                        <div class="before">
+                            Действует до <span class="end">26.05.19</span>
+                        </div>
+                    </div>
+                    <div class="tabs-block-bottom">
+                        <span class="discount">-45%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container recommend">
+            <h2 class="main-title text-uppercase">Мой купон рекомендует</h2>
+        </div>
+        <div class="container-fluid mb-5">
+            <div class="row d-flex justify-content-center">
+                <div class="recommend-block">
+                    <div class="recommend-block-img">
+                        <img src="img/recommend-1.jpg" alt="" class="img-fluid">
+                    </div>
+                    <div class="recommend-block-title">
+                        <p>Аутсорсинг бухгалтерские услуги, составление годового отчета.</p>
+                        <div class="recommend-block-bottom">
+                            <a href="" class="button">Услуги</a>
+                            <span class="price">Цена: от 1 500</span>
+                            <span class="discount">-45%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="recommend-block">
+                    <div class="recommend-block-img">
+                        <img src="img/recommend-2.jpg" alt="" class="img-fluid-">
+                    </div>
+                    <div class="recommend-block-title">
+                        <p>Пилатес, йога, тренажерный зал - скидка на абонименты от 6 месяцев.</p>
+                        <div class="recommend-block-bottom">
+                            <a href="" class="button">Фитнес</a>
+                            <span class="price">Цена: от 1 500</span>
+                            <span class="discount">-45%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="recommend-block">
+                    <div class="recommend-block-img">
+                        <img src="img/recommend-3.jpg" alt="" class="img-fluid-">
+                    </div>
+                    <div class="recommend-block-title">
+                        <p>Курс 7 сеансов классического массажа лица.</p>
+                        <div class="recommend-block-bottom">
+                            <a href="" class="button">Красота</a>
+                            <span class="price">Цена: от 1 500</span>
+                            <span class="discount">-45%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="recommend-block">
+                    <div class="recommend-block-img">
+                        <img src="img/recommend-4.jpg" alt="" class="img-fluid">
+                    </div>
+                    <div class="recommend-block-title">
+                        <p>Курсы интернет технологий. Специальности веб дизайнер, маркетолог, программист.</p>
+                        <div class="recommend-block-bottom">
+                            <a href="" class="button">Обучение</a>
+                            <span class="price">Цена: от 1 500</span>
+                            <span class="discount">-45%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="recommend-block">
+                    <div class="recommend-block-img">
+                        <img src="img/recommend-5.jpg" alt="" class="img-fluid">
+                    </div>
+                    <div class="recommend-block-title">
+                        <p>Подарки, сувениры, необычные букелы для любого случая.</p>
+                        <div class="recommend-block-bottom">
+                            <a href="" class="button">Подарки</a>
+                            <span class="price">Цена: от 1 500</span>
+                            <span class="discount">-45%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container mb-5 ideas">
+            <h2 class="main-title text-uppercase">Идеи на каждый день</h2>
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 mb-3 ideas-item">
+                    <div class="ideas-block">
+                        <img src="img/ideas-1.jpg" alt="" class="img-fluid">
+                        <div class="ideas-block-title text-left">
+                            <a href="">Как экономить на покупках в интернет-магазинах</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 mb-3 ideas-item">
+                    <div class="row d-flex justify-content-between">
+                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 item mb-3">
+                            <div class="ideas-block">
+                                <img src="img/ideas-2.jpg" alt="" class="img-fluid">
+                                <div class="ideas-block-title">
+                                    <a href="">Онлайн курсы востребованные профессии</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 item mb-3">
+                            <div class="ideas-block">
+                                <img src="img/ideas-3.jpg" alt="" class="img-fluid">
+                                <div class="ideas-block-title">
+                                    <a href="">Выгодные предложения весна 2019</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 item mt-3">
+                            <div class="ideas-block">
+                                <img src="img/ideas-4.jpg" alt="" class="img-fluid">
+                                <div class="ideas-block-title">
+                                    <a href="">Досуг с ребенком в мегаполисе</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 item mt-3">
+                            <div class="ideas-block">
+                                <img src="img/ideas-5.jpg" alt="" class="img-fluid">
+                                <div class="ideas-block-title">
+                                    <a href="">Идеи подарков для любимых</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container mb-3 info">
+            <h2 class="main-title text-uppercase">Мой купон — как это работает?</h2>
+            <div class="row">
+                <div class="col-12 my-2">
+                    Мы сотрудничаем с проверенными партнерами, которые предоставляют нашим пользователям самые выгодные
+                    и качественные услуги. С каждым из них мы договариваемся о лучших условиях для вас. Взамен
+                    гарантируем партнеру привлечь определенное количество покупателей
+                </div>
+                <div class="col-12 my-2 info-block">
+                    <img src="img/icon-01.png" alt="" class="info-block-img">
+                    Выбирайте на сайте Мой купон интересующую вас акцию. Купон — это сертификат на получение услуг или
+                    приобретение товаров. Вы покупаете купон на сайте, распечатываете и затем предъявляете его при
+                    получении услуги или товара.
+                </div>
+                <div class="col-12 my-2 info-block">
+                    <img src="img/icon-02.png" alt="" class="info-block-img">
+                    Компания Мой купон предлагает исключительно качественные услуги и товары от проверенных партнеров.
+                    На сайте вы можете выбрать любые услуги и товары — вас ждут скидки на увлекательные туры, экскурсии,
+                    развлечения, товары для дома и многое другое. Получайте баллы
+                    за каждый купон, репост в социальных сетях, а так же отзывы.
+                </div>
+                <div class="col-12 my-2 info-block">
+                    <img src="img/icon-03.png" alt="" class="info-block-img">
+                    Каждая акция имеет ограниченный срок действия, в течение которого у пользователей сайта Мой купон
+                    появляется уникальная возможность воспользоваться тем или иным предложением.
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer pt-3">
+        <div class="footer-menu">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-4">
+                        <h3 class="footer-menu-title text-uppercase">Компания</h3>
+                        <ul>
+                            <li><a href="">О проекте</a></li>
+                            <li><a href="">Вакансии</a></li>
+                            <li><a href="">Мобильные приложения</a></li>
+                            <li><a href="">Помощь</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-4">
+                        <h3 class="footer-menu-title text-uppercase">Связь с нами</h3>
+                        <ul>
+                            <li><a href="">Информация</a></li>
+                            <li><a href="">Рекламные возможности</a></li>
+                            <li><a href="">Положение о ПД</a></li>
+                            <li><a href="">Договор оферты</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-4">
+                        <h3 class="footer-menu-title text-uppercase">Контакты</h3>
+                        <ul>
+                            <li><a href="tel:+78005557108">8 800 555 71 08</a></li>
+                            <li><a href="https://vk.com/mycupon/" target="_blank">vk.com/mycupon</a></li>
+                            <li><a href="mailto:info@mycupon.ru">info@mycupon.ru</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright py-3">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        &copy; 2010 – 2019. Разработка сайта <a href="https://xwork.site" target="_blank">xWork</a>. All
+                        Rights Reserved.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <a id="back-to-top" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+     aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique omnis ab veniam, repellat
+                    asperiores assumenda harum saepe delectus quisquam aliquam ex quaerat, porro deserunt, itaque
+                    recusandae accusantium quos? Molestiae, at.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="js/jquery-1.12.4.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.jcarousel.min.js"></script>
+<script src="js/isotope.pkgd.min.js"></script>
+<script src="js/jquery.matchHeight-min.js"></script>
+<!--build:js js/main.min.js -->
+<script src="js/script.js"></script>
+<!-- endbuild -->
+
+</body>
+
+</html>

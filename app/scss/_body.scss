@@ -1,16 +1,17 @@
 /*!
  * Body content
  */
-@import url('https://fonts.googleapis.com/css?family=M+PLUS+1p:300,400,700');
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans+Condensed:400,600&display=swap');
 
 body {
   padding: 0;
   margin: 0;
-  font-family: 'M PLUS 1p', sans-serif;
+  font-family: 'Fira Sans Condensed', sans-serif;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 18px;
   background: #f6f0f6;
   color: $grey-dark;
+  font-variant: small-caps;
 }
 
 /* error if tags without attr */
@@ -56,6 +57,7 @@ a, a:hover, button, button:hover {
   width: 100%;
   margin: 0;
   padding: 0;
+  height: -webkit-fill-available;
 }
 
 #back-to-top {
@@ -81,16 +83,16 @@ a, a:hover, button, button:hover {
 }
 
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-  color: #ddd;
+  color: #474141;
 }
 ::-moz-placeholder { /* Firefox 19+ */
-  color: #ddd;
+  color: #474141;
 }
 :-ms-input-placeholder { /* IE 10+ */
-  color: #ddd;
+  color: #474141;
 }
 :-moz-placeholder { /* Firefox 18- */
-  color: #ddd;
+  color: #474141;
 }
 .animate, .animate:hover {
   transition: .5s;

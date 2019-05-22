@@ -1,4 +1,65 @@
 /*!
  * Header content
  */
-.header {}
+.header {
+
+  & .navbar {
+    box-shadow: 0px 0px 3px $grey-dark;
+  }
+
+  & .navbar-brand {
+    margin-right: 3rem;
+  }
+
+  & .navbar-nav {
+
+    @media screen and (max-width: 991px) {
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  & .form-inline {
+
+    @media screen and (max-width: 991px) {
+      flex-direction: row;
+      justify-content: center;
+    }
+
+    & .form-control {
+      text-align: center;
+      background: transparent;
+      border-radius: 0;
+      border-color: #ececec;
+      transition: .3s;
+
+      &:hover {
+        background: $white;
+        transition: .3s;
+      }
+    }
+
+    & .search-button {
+      background: transparent;
+    }
+  }
+
+  & .register {
+
+    @media screen and (max-width: 991px) {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      margin-bottom: 10px;
+    }
+
+    & .target {
+      margin-bottom: -10px;
+
+      @media screen and (max-width: 991px) {
+        margin-right: 10px;
+      }
+    }
+  }
+}

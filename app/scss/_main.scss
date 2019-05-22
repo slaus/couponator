@@ -3,7 +3,188 @@
  */
 
 .main {
-  padding-top: 70px;
+  padding-top: 90px;
+
+  & .carousel {
+
+    &-caption {
+
+      @media screen and (max-width: 991px) {
+        padding-top: 0;
+        padding-bottom: 0;
+        bottom: 5px;
+      }
+
+      &-left {
+
+        & .title {
+          color: $purple;
+          font-weight: 600;
+
+          @media screen and (max-width: 991px){
+            font-size: 26px;
+          }
+        }
+
+        & .description {
+          display: block;
+          width: 80%;
+          text-align: left;
+          font-size: 24px;
+          line-height: 24px;
+          text-shadow: 1px 2px 5px $black;
+
+          @media screen and (max-width: 991px){
+            width: 100%;
+            font-size: 20px;
+          }
+        }
+
+        & .btn-more {
+          background: $green;
+          border-radius: 0;
+          color: $white;
+          padding-left: 40px;
+          padding-right: 40px;
+          transition: .3s;
+
+          &:hover {
+            background: $purple-light;
+            transition: .3s;
+          }
+
+          @media screen and (max-width: 991px) {
+            margin-bottom: 10px;
+            font-size: 12px;
+            padding-left: 25px;
+            padding-right: 25px;
+          }
+        }
+      }
+
+      &-right {
+
+        & .tabs-block-left {
+          color: $grey-dark;
+          font-weight: 400;
+          font-size: 14px;
+
+          & .views {
+            display: inline-block;
+            background: url("../img/views-b.png") center left no-repeat;
+            background-size: contain;
+            width: 70px;
+            height: 20px;
+            padding-left: 10px;
+          }
+
+          & .favorites {
+            display: inline-block;
+            background: url("../img/favorites-b.png") center left no-repeat;
+            background-size: contain;
+            width: 70px;
+            height: 20px;
+            padding-left: 10px;
+          }
+
+          & .comment {
+            display: inline-block;
+            background: url("../img/comment-b.png") center left no-repeat;
+            background-size: contain;
+            width: 70px;
+            height: 20px;
+            padding-left: 10px;
+          }
+        }
+
+        & .tabs-block-right {
+          position: relative;
+          margin-right: 10px;
+          width: 36px;
+          height: 36px;
+          background: url("../img/like.png") center center no-repeat;
+          background-size: cover;
+
+          & .like {
+            background: transparent;
+            width: 36px;
+            height: 18px;
+            display: inline-block;
+            border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+            transform: rotate(-45deg);
+            position: absolute;
+            left: -7px;
+            top: 1px;
+            z-index: 1;
+
+            &:hover {
+              text-decoration: none;
+              background: rgba(255, 255, 255, .4);
+            }
+          }
+
+          & .like-no {
+            color: $green;
+            position: absolute;
+            top: 7px;
+            left: -37px;
+            display: block;
+            width: 30px;
+            height: 22px;
+            margin-left: 0;
+            margin-top: 0;
+            text-align: right;
+            z-index: 2;
+          }
+
+          & .dislike {
+            background: transparent;
+            width: 36px;
+            height: 18px;
+            display: inline-block;
+            border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+            transform: rotate(135deg);
+            position: absolute;
+            right: -8px;
+            bottom: 2px;
+            z-index: 1;
+
+            &:hover {
+              text-decoration: none;
+              background: rgba(255, 255, 255, .4);
+            }
+          }
+
+          & .dislike-no {
+            color: $purple;
+            position: absolute;
+            top: 7px;
+            left: 45px;
+            display: block;
+            margin-right: 0;
+            margin-top: 0;
+            width: 30px;
+            height: 22px;
+            text-align: left;
+            z-index: 2;
+          }
+        }
+      }
+    }
+
+    &-item {
+
+      @media screen and (max-width: 767px) {
+        height: 185px;
+
+        & img {
+          height: 100%;
+          width: auto !important;
+        }
+      }
+    }
+
+  }
 
   & .tabs-nav {
     border-bottom: none;
@@ -29,6 +210,36 @@
         color: $purple;
         background-color: transparent;
         border-color: transparent;
+      }
+    }
+  }
+
+  & .block-buttons {
+
+    & > .row {
+      margin: 10px 0 40px;
+
+      & .block-ads {
+        margin-bottom: -3px;}
+
+      & .block-buttons-item {
+        display: block;
+        width: 100%;
+        height: calc(100% - 3px);
+        overflow: hidden;
+        background: $purple-light;
+
+        &:hover img {
+          opacity: .7;
+          transition: .5s;
+          transform: scale(1.1);
+        }
+
+        & .block-buttons-img {
+          transition: .5s;
+          width: inherit;
+          height: auto;
+        }
       }
     }
   }
@@ -91,17 +302,17 @@
       }
 
       & .tabs-block-title {
-        height: 120px;
+        height: 85px;
         width: 100%;
         background: $white;
-        border-left: 5px solid $green;
+        border-left: 5px solid $grey;
         padding: 10px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
 
         & p {
-          font-size: 14px;
+          font-size: 18px;
           line-height: 16px;
         }
       }
@@ -136,9 +347,9 @@
               content: 'ПОДРОБНЕЕ';
               transition: .3s;
               text-align: center;
-              color: $purple;
+              color: $purple-light;
               font-weight: 600;
-              line-height: 180px;
+              line-height: 200px;
               position: absolute;
               display: block;
               height: 100%;
@@ -150,7 +361,7 @@
             }
             & img {
               transform: scale(1.1);
-              transition: .5s;
+              transition: .8s;
               position: relative;
               z-index: 2;
 
@@ -161,18 +372,36 @@
 
       & .countdown {
         position: relative;
-        height: 70px;
+        height: 30px;
         width: 100%;
-        margin-top: -70px;
-        color: $white;
-        background: rgba(0, 0, 0, .55);
-        z-index: 2;
+        margin-top: -30px;
+        padding-left: 30px;
+        padding-right: 30px;
+        color: $grey-dark;
+        background: rgba(255, 255, 255, .55);
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         align-content: center;
         align-items: center;
-        font-size: 15px;
+        font-size: 18px;
         z-index: 5;
+
+        & .days:after {
+          content: " дней";
+
+          @media screen and (max-width: 991px) {
+            content: " д.";
+          }
+        }
+
+        & .end:before {
+          content: "Купон действует до ";
+
+          @media screen and (max-width: 991px) {
+            content: "До ";
+          }
+        }
+
 
         & [id*=clockdiv].hidden {
           display: none;
@@ -184,64 +413,119 @@
         justify-content: space-between;
         align-items: center;
 
+        &-button {
+          display: block;
+          width: 18px;
+          height: 16px;
+          background: url("../img/favorites-button.png") center center no-repeat;
+          background-size: cover;
+          margin-right: 20px;
+          margin-top: -2px;
+        }
+
         .tabs-block-left {
           color: $grey;
           font-weight: 400;
+          font-size: 14px;
 
           & .views {
             display: inline-block;
             background: url("../img/views.png") center left no-repeat;
+            background-size: contain;
             width: 75px;
-            height: 25px;
-            padding-left: 40px;
+            height: 20px;
+            padding-left: 30px;
           }
 
           & .favorites {
             display: inline-block;
             background: url("../img/favorites.png") center left no-repeat;
-            width: 70px;
-            height: 25px;
-            padding-left: 35px;
+            background-size: contain;
+            width: 75px;
+            height: 20px;
+            padding-left: 30px;
           }
 
           & .comment {
             display: inline-block;
             background: url("../img/comment.png") center left no-repeat;
-            width: 70px;
-            height: 25px;
-            padding-left: 35px;
+            background-size: contain;
+            width: 75px;
+            height: 20px;
+            padding-left: 30px;
+          }
+        }
+      }
+
+      & .tabs-block-bottom {
+        width: 100%;
+        height: 50px;
+        background: $white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 30px;
+        padding-right: 30px;
+
+        @media screen and (max-width: 991px) {
+          padding-left: 10px;
+          padding-right: 20px;
+        }
+
+        & .discount {
+          color: $purple-light;
+          font-weight: 700;
+          font-size: 32px;
+          display: block;
+          line-height: 50px;
+
+          @media screen and (max-width: 991px) {
+            font-size: 26px;
+          }
+        }
+
+        & .price {
+          color: $grey-dark;
+          font-weight: 400;
+          font-size: 30px;
+          display: block;
+          line-height: 50px;
+
+          @media screen and (max-width: 991px) {
+            font-size: 22px;
           }
         }
 
         .tabs-block-right {
           position: relative;
-          margin-right: 20px;
-          width: 46px;
-          height: 46px;
+          margin-right: 10px;
+          width: 36px;
+          height: 36px;
           background: url("../img/like.png") center center no-repeat;
+          background-size: cover;
 
           & .like {
             background: transparent;
-            width: 46px;
-            height: 23px;
+            width: 36px;
+            height: 18px;
             display: inline-block;
             border-radius: 50% 50% 0 0 / 100% 100% 0 0;
             transform: rotate(-45deg);
             position: absolute;
-            left: -9px;
-            top: 3px;
+            left: -7px;
+            top: 1px;
             z-index: 1;
 
             &:hover {
               text-decoration: none;
-              background: rgba(255, 255, 255, .5);
+              background: rgba(255, 255, 255, .4);
             }
           }
 
           & .like-no {
             color: $green;
             position: absolute;
-            top: 11px;
+            top: 7px;
             left: -37px;
             display: block;
             width: 30px;
@@ -254,27 +538,27 @@
 
           & .dislike {
             background: transparent;
-            width: 46px;
-            height: 23px;
+            width: 36px;
+            height: 18px;
             display: inline-block;
             border-radius: 50% 50% 0 0 / 100% 100% 0 0;
             transform: rotate(135deg);
             position: absolute;
-            right: -9px;
-            bottom: 3px;
+            right: -8px;
+            bottom: 2px;
             z-index: 1;
 
             &:hover {
               text-decoration: none;
-              background: rgba(255, 255, 255, .5);
+              background: rgba(255, 255, 255, .4);
             }
           }
 
           & .dislike-no {
             color: $purple;
             position: absolute;
-            top: 11px;
-            left: 53px;
+            top: 7px;
+            left: 45px;
             display: block;
             margin-right: 0;
             margin-top: 0;
@@ -283,23 +567,6 @@
             text-align: left;
             z-index: 2;
           }
-        }
-      }
-
-      & .tabs-block-bottom {
-        position: absolute;
-        right: 25px;
-        top: 130px;
-
-        & .discount {
-          color: $white;
-          background: $purple;
-          border-radius: 50%;
-          width: 45px;
-          height: 45px;
-          display: block;
-          line-height: 45px;
-          text-align: center;
         }
       }
     }
@@ -496,6 +763,90 @@
         float: left;
         padding-top: 5px;
         margin-left: -75px;
+      }
+    }
+  }
+}
+
+
+.register-page {
+  //height: 500px;
+  width: 100%;
+  max-width: 420px;
+  background: $white;
+  padding: 30px;
+  font-variant: small-caps;
+
+  &-title {
+    font-size: 24px;
+    text-transform: uppercase;
+    color: $green;
+  }
+
+  & input {
+    font-variant: small-caps;
+    text-align: center;
+    height: 50px;
+    width: 100%;
+    margin-bottom: 15px;
+    border: none;
+    background: #f6f0f6;
+    padding-top: 10px;
+
+    &[type="submit"] {
+      background: $green;
+      color: $white;
+      text-transform: uppercase;
+      padding-top: 5px;
+      font-size: 14px;
+      cursor: pointer;
+      transition: .3s;
+
+      &:hover {
+        background: $purple-light;
+        transition: .3s;
+      }
+    }
+  }
+
+  & .forgot-password {
+    text-decoration: underline;
+    font-size: 14px;
+    transition: .3s;
+
+    &:hover {
+      color: $purple-light;
+      transition: .3s;
+    }
+  }
+
+  & .social {
+
+    &-block {
+
+      &-item {
+        background: $purple;
+        font-size: 28px;
+        line-height: 48px;
+        display: block;
+        margin: 5px;
+        text-align: center;
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        color: $white;
+        transition: .3s;
+
+        &:hover {
+          background: $purple-light;
+          transition: .3s;
+        }
+      }
+
+      &-description {
+        line-height: 18px;
+        padding-bottom: 15px;
+        border-bottom: 3px solid #f6f0f6;
       }
     }
   }
